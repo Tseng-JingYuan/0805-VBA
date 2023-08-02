@@ -1,0 +1,8 @@
+Sub demo3()
+For i = 1 To Sheets.Count
+Sheets(i).Copy
+ActiveWorkbook.SaveAs "C:\Users\Tseng Jing Yuan\Desktop\VBA_0805\同檔跨工作表自動同步更新-自動同步更新檔" & ActiveSheet.Name, Password:=("0800956956")
+ActiveWorkbook.Close
+Next
+MsgBox "完成了！"
+End Sub
