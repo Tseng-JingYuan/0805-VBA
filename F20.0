@@ -1,0 +1,31 @@
+Sub F20_V1()
+Dim country As Long
+Dim sidx As Integer
+For sidx = 1 To Sheets.Count
+For country = 2 To 206
+Sheets(sidx).Activate  '啟動所有工作表
+  Dim dtrange As Range '宣告範圍1變數
+  Set dtrange = ActiveSheet.UsedRange '範圍1設定為已使用區域
+If (Cells(country, 10).Value = "F20" Or Cells(country, 10).Value = "F20.0") Then
+
+  Cells(country, 10).Font.ColorIndex = 3 '
+  Cells(country, 10).Interior.ColorIndex = 6
+Else
+
+  Cells(country, 10).Font.ColorIndex = 1
+  Cells(country, 10).Interior.ColorIndex = 0
+End If
+Next
+For country = 2 To 206
+If (Cells(country, 11).Value = "一級") Then
+
+  Cells(country, 11).Font.ColorIndex = 3
+  Cells(country, 11).Interior.ColorIndex = 6
+Else
+
+  Cells(country, 11).Font.ColorIndex = 1
+  Cells(country, 11).Interior.ColorIndex = 0
+End If
+Next
+Next
+End Sub
