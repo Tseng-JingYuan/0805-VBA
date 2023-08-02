@@ -2,7 +2,7 @@ Sub F20_V1()
 Dim country As Long
 Dim sidx As Integer
 For sidx = 1 To Sheets.Count
-For country = 2 To 206
+For country = 2 To 500
 Sheets(sidx).Activate  '啟動所有工作表
   Dim dtrange As Range '宣告範圍1變數
   Set dtrange = ActiveSheet.UsedRange '範圍1設定為已使用區域
